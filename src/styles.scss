@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', monospace;
+}
