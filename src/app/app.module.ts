@@ -9,13 +9,15 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
 
 import { AppRoutingModule }     from './app-routing.module';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MatchesComponent,
     NavigationComponent,
-    LeaderboardsComponent
+    LeaderboardsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
