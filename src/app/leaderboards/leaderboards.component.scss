@@ -1,0 +1,166 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.player-groupings {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.player-grouping {
+    border: 5px solid transparent;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    > .label {
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+            margin: 0 3px;
+        }
+
+        span {
+            flex: 1;
+            letter-spacing: 3px;
+        }
+    }
+
+    &.legendary {
+        background: #E8EAF6;
+        border-color: #1A237E;
+
+        > .label {
+            background: #1A237E;
+        }
+        
+        .header {
+            background: #9FA8DA;
+        }
+    }
+
+    &.world-class {
+        background: #E0F7FA;
+        border-color: #006064;
+
+        > .label {
+            background: #006064;
+        }
+        
+        .header {
+            background: #80DEEA;
+        }
+    }
+
+    &.professional {
+        background: #F1F8E9;
+        border-color: #33691E;
+
+        > .label {
+            background: #33691E;
+        }
+        
+        .header {
+            background: #C5E1A5;
+        }
+    }
+
+    &.semi-pro {
+        background: #FFF8E1;
+        border-color: #FF6F00;
+
+        > .label {
+            background: #FF6F00;
+        }
+
+        .header {
+            background: #FFE082;
+        }
+    }
+
+    &.amateur {
+        background: #EFEBE9;
+        border-color: #3E2723;
+
+        > .label {
+            background: #3E2723;
+        }
+
+        .header {
+            background: #BCAAA4;
+        }
+    }
+
+    .player {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        border: 2px solid transparent;
+
+        span {
+            color: #546E7A;
+        }
+
+        &.header {
+            align-items: flex-end;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            line-height: 1.0em;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        &:not(.header) {
+
+            &:hover {
+                background: #ECEFF1;
+            }
+        }
+
+        .rank {
+            width: 60px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 25px;
+        }
+
+        .name {
+            width: 200px;
+            color: black;
+        }
+
+        .steam-id {
+            width: 200px;
+        }
+
+        .mmr {
+            width: 100px;
+            color: black;
+        }
+
+        .matches, .goals, .clean-sheets {
+            width: 75px;
+            text-align: center;
+        }
+    }
+}

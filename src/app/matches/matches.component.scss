@@ -1,0 +1,116 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    color: #546E7A;
+}
+
+.matches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.match {
+    margin: 10px;
+    padding: 15px;
+    background: #ECEFF1;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 5px;
+
+    .date {
+        display: flex;
+        justify-content: space-between;
+
+        .date-icon {
+            margin-right: 5px;
+        }
+
+        .time-icon {
+            margin-right: 5px;
+        }
+    }
+
+    .score {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        background: #263238;
+        color: white;
+        border-radius: 5px;
+        margin: 20px 0;
+
+        .team-name {
+            margin: 0 10px;
+        }
+
+        .goals {
+            flex: 1;
+            text-align: center;
+
+            .separator {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .teams {
+        display: flex;
+        justify-content: space-between;
+
+        .team {
+            display: flex;
+            flex-direction: column;
+
+            &:first-child {
+                align-items: flex-start;
+            }
+
+            &:last-child {
+                align-items: flex-end;
+                text-align: right;
+
+                .player {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            .player {
+                display: flex;
+                align-items: center;
+
+                .mmr {
+                    background: #CFD8DC;
+                    border-radius: 3px;
+                    padding: 1px 3px;
+                }
+
+                .name {
+                    margin: 0 5px;
+                }
+
+                .goals {
+
+                    i {
+                        margin: 0 1px;
+                    }
+                }
+                
+                &:not(:first-child) {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

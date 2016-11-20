@@ -1,0 +1,35 @@
+<h1>Leaderboards</h1>
+
+<div class="player-groupings">
+
+  <div *ngFor="let playerGrouping of playerGroupings; let i = index" class="player-grouping {{playerGrouping.mmrBracket.name}}">
+
+    <div class="label">
+      <i *ngFor="let stars of getStars(i)" class="fa fa-star"></i>
+      <span>{{playerGrouping.mmrBracket.label}}</span>
+      <i *ngFor="let stars of getStars(i)" class="fa fa-star"></i>
+      </div>
+
+    <div class="player header">
+      <span class="rank">Rank</span>
+      <span class="avatar"></span>
+      <span class="name">Name</span>
+      <span class="mmr">MMR</span>
+      <span class="matches">Matches</span>
+      <span class="goals">Goals</span>
+      <span class="clean-sheets">Clean Sheets</span>
+    </div>
+
+    <div *ngFor="let player of playerGrouping.players; let rank = index" class="player">
+      <span class="rank">{{rank + 1}}.</span>
+      <span class="avatar fa fa-user-circle"></span>
+      <span class="name">{{player.name}}</span>
+      <span class="mmr">{{player.mmrStats.mmr}}</span>
+      <span class="matches">{{player.mmrStats.matches}}</span>
+      <span class="goals">{{player.mmrStats.goals}}</span>
+      <span class="clean-sheets">{{player.mmrStats.cleanSheets}}</span>
+    </div>
+
+  </div>
+
+</div>

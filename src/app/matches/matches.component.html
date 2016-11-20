@@ -1,0 +1,27 @@
+<h1>Matches</h1>
+<ol class="matches">
+  <li *ngFor="let match of matches" class="match">
+    <div class="date">
+      <span><i class="date-icon fa fa-calendar-o"></i>{{match.startTime | date:'y/MM/dd'}}</span>
+      <span><i class="time-icon fa fa-clock-o"></i>{{match.startTime | date:'HH:mm'}}</span>
+    </div>
+    <div class="score">
+      <span class="team-name">{{match.homeTeam.name}}</span>
+      <div class="goals">
+        <span>{{match.homeTeam.goals}}</span>
+        <span class="separator">-</span>
+        <span>{{match.awayTeam.goals}}</span>
+      </div>
+      <span class="team-name">{{match.awayTeam.name}}</span>
+    </div>
+    <div class="teams">
+      <ol *ngFor="let team of [match.homeTeam, match.awayTeam]" class="team">
+        <li *ngFor="let player of team.players" class="player">
+          <span class="mmr">{{player.matchStats.mmr}}</span>
+          <span class="name">{{player.name}}</span>
+          <span class="goals"><i *ngFor="let goal of getPlayerGoals(player)" class="fa fa-soccer-ball-o"></i></span>
+        </li>
+      </ol>
+    </div>
+  </li>
+</ol>
