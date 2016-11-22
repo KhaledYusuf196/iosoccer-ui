@@ -120,9 +120,9 @@ matchFiles.forEach(fileName => {
         totalData.name = player.info.name;
         totalData.matches += 1;
 
-        if (matchData.teams[team] == MatchResult.WIN)
+        if (matchData.teams[team].result == MatchResult.WIN)
             totalData.wins += 1
-        else if (matchData.teams[team] == MatchResult.LOSS)
+        else if (matchData.teams[team].result == MatchResult.LOSS)
             totalData.losses += 1
         else
             totalData.draws += 1;

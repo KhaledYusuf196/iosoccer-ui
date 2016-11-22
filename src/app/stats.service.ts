@@ -20,7 +20,7 @@ export class StatsService {
 
       let knownPlayer = KNOWN_PLAYERS.find(x => x.steamId == data.steamId);
       let name = knownPlayer && knownPlayer.name || data.name;
-      let stats = new PlayerMmrStats(data.mmr, data.goals, data.wins, data.draws, data.losses, data.goals, data.cleanSheets);
+      let stats = new PlayerMmrStats(data.mmr, data.matches, data.wins, data.draws, data.losses, data.goals, data.cleanSheets);
 
       return new Player(data.steamId, name, stats);
     });
