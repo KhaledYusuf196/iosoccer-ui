@@ -11,7 +11,8 @@
     "e2e": "protractor",
     "stats": "node build-statistics-file.js",
     "build": "npm run stats && ng build",
-    "publish": "npm run stats && ng github-pages:deploy --message \"Publish\""
+    "publish": "npm run stats && ng github-pages:deploy --message \"Publish\"",
+    "server": "ng serve"
   },
   "private": true,
   "dependencies": {
